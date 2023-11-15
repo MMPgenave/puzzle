@@ -1,0 +1,26 @@
+<script src="https://flbulgarelli.github.io/headbreaker/js/headbreaker.js"></script>
+<body>
+  <div id="puzzle"></div>
+  <script>
+    const autogen = new headbreaker.Canvas("puzzle", {
+      width: 800,
+      height: 650,
+      pieceSize: 100,
+      proximity: 2,
+      borderFill: 10,
+      strokeWidth: 1,
+      lineSoftness: 0,
+    });
+    autogen.autogenerate({
+      horizontalPiecesCount: 2,
+      verticalPiecesCount: 1,
+      metadata: [
+        { color: "#B83361" },
+        { color: "#B87D32" },
+        { color: "#A4C234" },
+        { color: "#37AB8C" },
+      ],
+    });
+    autogen.draw();
+  </script>
+</body>
